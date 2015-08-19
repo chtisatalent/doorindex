@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="news-text">
 			    <h5> &nbsp </h5>
-				<h3>&nbsp 考场链接</h3>
+				<h3>&nbsp 相关链接</h3>
 			</div>
 			<div class="news-grids">
 			    <?php $hid = 0;
