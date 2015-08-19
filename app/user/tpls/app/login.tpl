@@ -4,7 +4,7 @@
 <div class="row-fluid">
 	<div class="container-fluid logcontent">
 		<div class="logbox exambox">
-			<form class="form-horizontal logform" method="post" action="index.php?user-app-login">
+			<!-- <form class="form-horizontal logform" method="post" action="index.php?user-app-login"> -->
 				<fieldset>
 					<legend>用户登录</legend>
 					<div class="logcontrol">
@@ -23,7 +23,7 @@
 						<div class="control-group">
 							<div class="controls">
 								<input type="hidden" value="1" name="userlogin"/>
-								<button class="btn btn-info logbtn" type="submit">登1录</button>
+								<button class="btn btn-info logbtn" type="submit">登录</button>
 								<button onclick="javascript:window.location='index.php?user-app-register';" type="button" class="btn logbtn">注册</button>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 						</div>
 					</div>
 				</fieldset>
-			</form>
+			<!-- </form> -->
 		</div>
 		<div class="logbotm"></div>
 	</div>
