@@ -35,7 +35,7 @@
 						<div class="control-group">
 							<div class="controls">
 								<button class="btn btn-info logbtn" type="submit">立即注册</button>
-								<input type="hidden" value="1" name="userregister"/>
+								<input type="hidden" value="1" name="userregister" />
 							</div>
 						</div>
 						<div class="control-group">
