@@ -58,7 +58,7 @@
 			</div>
 						<div class="news-text">
 			    <h5> &nbsp </h5>
-				<h3>&nbsp 组委会</h3>
+				<h3>&nbsp 组委会组成</h3>
 			</div>
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				  <a href="http://10.llixinyu.applinzi.com/index.html">
