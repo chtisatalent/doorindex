@@ -39,7 +39,7 @@
 			    {x2;tree:$basics['new']['data'],new,hid}
 				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				  <a href="index.php?exam-app-index-setCurrentBasic&basicid={x2;v:new['basicid']}" title="{x2;v:new['basic']}">
-				    <img alt="1200x800" src="{x2;v:new['basicthumb']}"/>
+				    <img src="{x2;v:new['basicthumb']}" alt=""/>
 				    <h4>{x2;v:new['basic']}</h4>
 				  </a>
 				</div>
