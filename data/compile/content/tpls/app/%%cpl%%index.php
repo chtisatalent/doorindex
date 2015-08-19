@@ -44,6 +44,18 @@
 				  </a>
 				</div>
 			   <?php } ?>
+				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				  <a href="intro.html"> 
+					<img src="app/core/styles/css/img/new/img1.jpg" alt="" />
+					<h4><strong>赛事规则</strong></h4>
+				  </a>
+				</div>
+				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
+				  <a href="rank.php">
+				    <img src="app/core/styles/css/img/new/img2.jpg" alt="" />
+					<h4><strong>排行榜</strong></h4>
+				  </a>
+			</div>
 						<div class="news-text">
 			    <h5> &nbsp </h5>
 				<h3>&nbsp 组委会构成</h3>
