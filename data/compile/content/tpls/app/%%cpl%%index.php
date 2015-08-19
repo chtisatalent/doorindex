@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="news-text">
 			    <h5> &nbsp </h5>
-				<h3>&nbsp 相关链接</h3>
+				<h3>&nbsp 相关链接：请使用chorme内核浏览器，不要使用IE浏览器</h3>
 			</div>
 			<div class="news-grids">
 			    <?php $hid = 0;
