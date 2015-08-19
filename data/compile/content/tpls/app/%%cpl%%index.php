@@ -44,18 +44,6 @@
 				  </a>
 				</div>
 			   <?php } ?>
-				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="index.php"> 
-					<img src="app/core/styles/css/img/new/img1.jpg" alt="" />
-					<h4><strong>MISC</strong></h4>
-				  </a>
-				</div>
-				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="index.php">
-				    <img src="app/core/styles/css/img/new/img2.jpg" alt="" />
-					<h4><strong>PPC</strong></h4>
-				  </a>
-			</div>
 						<div class="news-text">
 			    <h5> &nbsp </h5>
 				<h3>&nbsp 组委会构成</h3>
