@@ -45,7 +45,7 @@
 				</div>
 			   <?php } ?>
 				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="intro.html"> 
+				  <a href="detailedrules.html"> 
 					<img src="app/core/styles/css/img/new/img1.jpg" alt="" />
 					<h4><strong>赛事规则</strong></h4>
 				  </a>
