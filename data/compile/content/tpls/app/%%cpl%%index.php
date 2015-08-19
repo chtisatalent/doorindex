@@ -31,7 +31,7 @@
 		<div class="container">
 			<div class="news-text">
 			    <h5> &nbsp </h5>
-				<h3>&nbsp 竞赛考场</h3>
+				<h3>&nbsp 组委会构成</h3>
 			</div>
 			<div class="news-grids">
 			    <?php $hid = 0;
@@ -59,19 +59,19 @@
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				  <a href="index.php">
 				    <img src="app/core/styles/css/img/new/img3.jpg" alt="" />
-					<h4><strong>CRYPTO</strong></h4>
+					<h4><strong>李新羽</strong></h4>
 				  </a>
 				</div>
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				  <a href="index.php">
 				    <img src="app/core/styles/css/img/new/img4.jpg" alt="" />
-				    <h4><strong>PWN</strong></h4>
+				    <h4><strong>黄婷</strong></h4>
 				  </a>
 				</div>
 				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
 				  <a href="index.php">
 				    <img src="app/core/styles/css/img/new/img5.jpg" alt="" />
-					<h4><strong>REVERSE</strong></h4>
+					<h4><strong>陈豪庭</strong></h4>
 				  </a>
 			    </div>
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
