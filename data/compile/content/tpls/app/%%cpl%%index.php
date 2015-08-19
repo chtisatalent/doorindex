@@ -61,19 +61,19 @@
 				<h3>&nbsp 组委会构成</h3>
 			</div>
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="index.php">
+				  <a href="http://10.llixinyu.applinzi.com/index.html">
 				    <img src="app/core/styles/css/img/new/img3.jpg" alt="" />
 					<h4><strong>李新羽</strong></h4>
 				  </a>
 				</div>
 				<div class="col-md-3 news-grid wow fadeInRight animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="index.php">
+				  <a href="https://jessicaht.github.io">
 				    <img src="app/core/styles/css/img/new/img4.jpg" alt="" />
 				    <h4><strong>黄婷</strong></h4>
 				  </a>
 				</div>
 				<div class="col-md-3 news-grid wow fadeInLeft animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation-delay: 0.4s;">
-				  <a href="index.php">
+				  <a href="http://blogofcht.applinzi.com/">
 				    <img src="app/core/styles/css/img/new/img5.jpg" alt="" />
 					<h4><strong>陈豪庭</strong></h4>
 				  </a>
