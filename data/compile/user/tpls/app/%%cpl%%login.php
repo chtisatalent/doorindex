@@ -4,7 +4,7 @@
 <div class="row-fluid">
 	<div class="container-fluid logcontent">
 		<div class="logbox exambox">
-			<form class="form-horizontal logform" method="post" action="index.php?">
+			<form class="form-horizontal logform" method="post" action="index.php?user-app-login">
 				<fieldset>
 					<legend>用户登录</legend>
 					<div class="logcontrol">
