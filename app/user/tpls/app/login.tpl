@@ -29,7 +29,7 @@
 						</div>
 						<div class="control-group">
 							<div class="controls">
-							<p>出现bug，在输入正确密码后请手动刷新</p>
+								<p>出现bug，在输入正确密码后请手动刷新</p>
 								<p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
 							</div>
 						</div>
