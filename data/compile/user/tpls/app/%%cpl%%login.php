@@ -4,7 +4,7 @@
 <div class="row-fluid">
 	<div class="container-fluid logcontent">
 		<div class="logbox exambox">
-			<form class="form-horizontal logform" method="post" action="index.php?user-app-login">
+			<form class="form-horizontal logform" method="post" action="index.php?">
 				<fieldset>
 					<legend>用户登录</legend>
 					<div class="logcontrol">
@@ -30,7 +30,7 @@
 						<div class="control-group">
 							<div class="controls">
 								
-<p style ="color:red;font-size:20px;">出现了bug，在输入正确用户名密码点击"登录"之后，请手动刷新或返回主页，自动进入登录用户视图</p><p>提供一个普通用户<br/>用户名：aaa<br/>密码:1111112<br/>为了网站安全，管理员账号请在邮件里面查收！</p><p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
+<p style ="color:red;font-size:20px;">出现了bug，在输入正确用户名密码点击"登录"之后，请手动刷新或返回主页，自动进入登录用户视图</p><p>提供一个普通用户<br/>用户名：aaa<br/>密码:111111<br/>为了网站安全，管理员账号请在邮件里面查收！</p><p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
 							</div>
 						</div>
 					</div>
