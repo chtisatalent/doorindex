@@ -7,7 +7,7 @@
 <meta name="description" content="移动互联网考试系统">
 <meta name="keywords" content="移动互联网考试系统">
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<title>移动互联网考试系统</title>
+<title>移动互联网考试系+统</title>
 <link href="app/core/styles/css/bootstrap.css" rel="stylesheet">
 <link href="app/core/styles/css/layoutit.css" rel="stylesheet">
 <link href="app/core/styles/css/plugin.css" rel="stylesheet">
