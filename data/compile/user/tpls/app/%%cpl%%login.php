@@ -23,7 +23,7 @@
 						<div class="control-group">
 							<div class="controls">
 								<input type="hidden" value="1" name="userlogin"/>
-								<button class="btn btn-info logbtn" type="submit" onclick="javascript:window.location='index.php?user-app-login'">登录</button>
+								<input class="btn btn-info logbtn" type="submit" value ="登录">
 								<button onclick="javascript:window.location='index.php?user-app-register';" type="button" class="btn logbtn">注册</button>
 							</div>
 						</div>
