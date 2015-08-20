@@ -29,7 +29,8 @@
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<p>请输入正确的用户名和密码1登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
+								
+<p3 color = "red">出现了bug，请在输入正确用户名密码之后，手动刷新会自动切入用户界面</p3><p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
 							</div>
 						</div>
 					</div>
