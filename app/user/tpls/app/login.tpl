@@ -31,7 +31,7 @@
 							<div class="controls">
 								<p>出现bug，在输入正确密码后请手动刷新</p>
 								
-<p style ="color:red;font-size:20px;">出现了bug，在输入正确用户名密码之后，请手动刷新，会进入登录后界面<br/>提供一个普通用户<br/>用户名：aaa<br/>密码:111111<br/>管理员账号请在邮件里面查收！</p><p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
+<p style ="color:red;font-size:20px;">出现了bug，在输入正确用户名密码之后，请手动刷新，会进入登录后界面</p><p>提供一个普通用户<br/>用户名：aaa<br/>密码:111111<br/>为了网站安全，管理员账号请在邮件里面查收！</p><p>请输入正确的用户名和密码登录　如果您还没有帐号，请在此<a href="index.php?user-app-register">注册</a></p>
 							</div>
 						</div>
 					</div>
