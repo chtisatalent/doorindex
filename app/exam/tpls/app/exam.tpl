@@ -24,6 +24,7 @@
 				<div class="alert alert-info">
 					<strong>提示：</strong>
 					<p>本考场开启时间 {x2;if:$data['currentbasic']['basicexam']['opentime']['start'] && $data['currentbasic']['basicexam']['opentime']['end']}{x2;date:$data['currentbasic']['basicexam']['opentime']['start'],'Y-m-d H:i:s'} - {x2;date:$data['currentbasic']['basicexam']['opentime']['end'],'Y-m-d H:i:s'}{x2;else}不限{x2;endif} ； 考试次数 {x2;if:$data['currentbasic']['basicexam']['examnumber']}{x2;$data['currentbasic']['basicexam']['examnumber']}{x2;else}不限{x2;endif} ； 抽卷规则 {x2;if:$data['currentbasic']['basicexam']['selectrule']}系统随机抽卷{x2;else}用户手选试卷{x2;endif}。</p>
+					<p>本考场开启时间 2016-09-01 08:00:00 - 2016-09-03 20:00:00 ； 考试次数 不限 ； 抽卷规则 系统随机抽卷。</p>
 				</div>
             	<ul class="unstyled">
                 	<li><b>1、</b>点击考试名称按钮进入答题界面，考试开始计时。</li>
