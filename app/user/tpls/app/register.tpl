@@ -6,7 +6,7 @@
 		<div class="logbox">
 			<form class="form-horizontal logform" method="post" action="index.php?user-app-register">
 				<fieldset>
-					<legend>注册用户</legend>
+					<legend>注册的用户</legend>
 					<div class="logcontrol">
 						<div class="control-group">
 							<label class="control-label" for="inputEmail">用户名：</label>
