@@ -41,7 +41,7 @@
 						<div class="control-group">
 							<div class="controls">
 							
-<p style ="color :red;font-size:20px;">出现bug，请在输入正确注册信息之后，手动刷新会自动登入注册用户界面</p><p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="index.php?user-app-login">登录</a></p>
+<p style ="color :red;font-size:20px;">出现bug，在输入正确注册信息之后，请手动刷新 此后会自动登入该注册用户界面</p><p>点击“立即注册”，即表示您同意并愿意遵守本站用户协议和隐私政策，如果您已有帐号，请在此<a href="index.php?user-app-login">登录</a></p>
 							</div>
 						</div>
 					</div>
