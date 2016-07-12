@@ -27,6 +27,7 @@ class db2
             if(!$this->linkid)
             {
             	$this->linkid = mysql_connect($host, $dbuser, $password) or die('Mysql数据库连接失败，请检查数据库用户名和密码是否正确！');
+
             }
             $version = $this->getVersion();
 

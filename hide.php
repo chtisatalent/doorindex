@@ -23,24 +23,25 @@
 			$dbun="root";
 			$dbp="1qaZ@wsx)p;/";
 			$dbn="pechina";*/
-      $dbadd="w.rdc.sae.sina.com.cn";
+      $dbadd="w.rdc.sae.sina.com.cn:3307";
       $dbun="yxm4o00yzk";
       $dbp="j0j130h24l022w3iy0zlk420x04xyjx0lz5043wy";
       $dbn="app_indexblog";
-      $SAE_MYSQL_PORT = "3307";
-/*            $dbadd="localhost";
+
+/*      $dbadd="localhost:3306";
       $dbun="root";
       $dbp="root";
-      $dbn="pechina";
-      $SAE_MYSQL_PORT = "3306";*/
-/*      用户名　 :  SAE_MYSQL_USER
+      $dbn="pechina";*/
+
+/*      
+      用户名　 :  SAE_MYSQL_USER
 密　　码 :  SAE_MYSQL_PASS
 主库域名 :  SAE_MYSQL_HOST_M
 从库域名 :  SAE_MYSQL_HOST_S
 端　　口 :  SAE_MYSQL_PORT
 数据库名 :  SAE_MYSQL_DB*/
-			/*$conn = @mysql_connect($dbadd,$dbun,$dbp);*/
-      $conn = mysql_connect($dbadd.':'.$SAE_MYSQL_PORT,$dbun,$dbp);
+			$conn = @mysql_connect($dbadd,$dbun,$dbp);
+ 
 			if (!$conn){
                die("连接数据库失败：" . mysql_error());
             }
