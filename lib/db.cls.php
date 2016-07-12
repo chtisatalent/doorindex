@@ -21,7 +21,8 @@ class db2
 	}
 
 	//连接MYSQL
-	public function connect($port = PT ,$host = DH,$dbuser = DU,$password = DP,$dbname = DB,$dbcode = HE)
+
+	public function connect($port = "10" ,$host = DH,$dbuser = DU,$password = DP,$dbname = DB,$dbcode = HE)
     {
             $dbcode = str_replace("-","",$dbcode);
             if(!$this->linkid)
