@@ -24,9 +24,9 @@
 			$dbp="1qaZ@wsx)p;/";
 			$dbn="pechina";*/
       $dbadd="w.rdc.sae.sina.com.cn:3307";
-      $dbun="yxm4o00yzk";
-      $dbp="j0j130h24l022w3iy0zlk420x04xyjx0lz5043wy";
-      $dbn="app_indexblog";
+      $dbun="ym3l0kmj01";
+      $dbp="z5h5mikk011i1wmymy402zhzk05wijy2l0hx1m52";
+      $dbn="app_doorblog";
 
 /*      $dbadd="localhost:3306";
       $dbun="root";
