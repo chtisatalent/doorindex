@@ -21,12 +21,13 @@ class db2
 	}
 
 	//连接MYSQL
-	public function connect($host = DH,$dbuser = DU,$password = DP,$dbname = DB,$dbcode = HE)
+	public function connect($port = PT ,$host = DH,$dbuser = DU,$password = DP,$dbname = DB,$dbcode = HE)
     {
             $dbcode = str_replace("-","",$dbcode);
             if(!$this->linkid)
             {
-            	$this->linkid = mysql_connect($host, $dbuser, $password) or die('Mysql数据库连接失败，请检查数据库用户名和密码是否正确！');
+            	/*$this->linkid = mysql_connect($host, $dbuser, $password) or die('Mysql数据库连接失败，请检查数据库用户名和密码是否正确！');*/
+                $this->linkid = mysql_connect($host.':'.$port, $dbuser, $password) or die('Mysql数据库连接失败，请检查数据库用户名和密码是否正确！');
 
             }
             $version = $this->getVersion();
