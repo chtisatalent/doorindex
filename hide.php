@@ -27,7 +27,7 @@
       $dbun="ym3l0kmj01";
       $dbp="z5h5mikk011i1wmymy402zhzk05wijy2l0hx1m52";
       $dbn="app_doorblog";
-      $dbport="3307"
+      $dbport="3307";
 
 /*      $dbadd="localhost:3306";
       $dbun="root";
