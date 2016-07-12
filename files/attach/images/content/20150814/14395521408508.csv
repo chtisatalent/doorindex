@@ -1,0 +1,103 @@
+1,"使用PreparedStatement预编译SQL,解决SQL注入问题，以下代码符合编码规范的是（）","<P> A &nbsp &nbsp &nbsp String sqlString = ""select * from db_user where username=? and password=?"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> B &nbsp &nbsp &nbsp String sqlString = ""select.* from db_user where username=? and password=?"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(3, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> C &nbsp &nbsp &nbsp String sqlString = ""select .from db_user where username=? and password=?"";</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, swd);</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> D &nbsp &nbsp &nbsp String sqlString = ""select *from db_user where username=? and password"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>",4,A,,1,2
+1,1、通过StringBulider 或 StringBuffer 拼接XML文件时，以下代码符合编码规 范的是（） ,"<p>A &nbsp &nbsp &nbsp   if (!Pattern.matches(""[A-Z]+"", quantity)) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      // Format violation</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<price>500</price>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       outStream.write(xmlString.getBytes());</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.flush();</p>
+
+<p>B &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9]+"", quantity)) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       // Format violation</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<price>500</price>\n"" +</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                     ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.write(xmlString.getBytes());</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.flush();</p>
+
+<p>C  &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9_.]+"", quantity)) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // Format violation</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<price>500</price>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp outStream.write(xmlString.getBytes());</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  outStream.flush();</p>
+
+<p>D  &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9.]+"", quantity)) {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // Format violation</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<price>500</price>\n"" +</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                  ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  outStream.write(xmlString.getBytes());</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    outStream.flush();</p>",4,B,,1,2
+1,   ,,4,D,,1,2
+1,,,4,D,,1,2
+1,,,4,C,,1,2
+1,,,4,A,,1,2
+1,,,4,B,,1,2
+1,,,4,C,,1,2
+1,,,4,A,,1,2
+1,,,4,B,,1,2
+1,,,4,D,,1,2
+1,,,4,B,,1,2
+1,,,4,A,,1,2
+1,,,4,C,,1,2
+1,,,4,B,,1,2
+1,,,4,A,,1,2
+1,,,4,A,,1,2
+1,,,4,C,,1,2
+1,,,4,D,,1,2
+1,,,4,B,,1,2
+1,,,4,C,,1,2
+1,,,4,A,,1,2
+1,,,4,B,,1,2
+1,,,4,D,,1,2
+1,,,4,A,,1,2
+1,,,4,C,,1,2
+1,,,4,B,,1,2
+1,,,4,D,,1,2
+1,,,4,A,,1,2
+1,,,4,D,,1,2
+1,,,4,D,,1,2
+1,,,4,B,,1,2
+1,,,4,C,,1,2
+1,,,4,A,,1,2
+1,,,4,C,,1,2
+1,,,4,C,,1,2
+1,,,4,B,,1,2
+1,,,4,A,,1,2
+1,,,4,A,,1,2
+1,,,4,D,,1,2
+1,,,4,C,,1,2
+1,,,4,B,,1,2
+1,,,4,B,,1,2
+1,,,4,D,,1,2
+1,,,4,A,,1,2
+1,,,4,A,,1,2
+1,,,4,C,,1,2
+1,,,4,D,,1,2
+1,,,4,B,,1,2
+1,,,4,A,,1,2

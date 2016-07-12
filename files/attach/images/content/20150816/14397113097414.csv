@@ -1,0 +1,1579 @@
+1,"使用PreparedStatement预编译SQL,解决SQL注入问题，以下代码符合编码规范的是（）","<P> A &nbsp &nbsp &nbsp String sqlString = ""select * from db_user where username=? and password=?"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> B &nbsp &nbsp &nbsp String sqlString = ""select.* from db_user where username=? and password=?"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(3, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> C &nbsp &nbsp &nbsp String sqlString = ""select .from db_user where username=? and password=?"";</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, swd);</P>
+<P>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>
+<P> D &nbsp &nbsp &nbsp String sqlString = ""select *from db_user where username=? and password"";</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp PreparedStatement stmt = connection.prepareStatement(sqlString);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(1, username);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp stmt.setString(2, pwd);</P>
+<P> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ResultSet rs = stmt.executeQuery();</P>",4,A,,1,3
+1,通过StringBulider 或 StringBuffer 拼接XML文件时，以下代码符合编码规 范的是（） ,"<p>A &nbsp &nbsp &nbsp   if (!Pattern.matches(""[A-Z]+"", quantity)) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      // Format violation</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<price>500</price>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       outStream.write(xmlString.getBytes());</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.flush();</p>
+
+<p>B &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9]+"", quantity)) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       // Format violation</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    ""<price>500</price>\n"" +</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                     ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.write(xmlString.getBytes());</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     outStream.flush();</p>
+
+<p>C  &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9_.]+"", quantity)) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // Format violation</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<price>500</price>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp outStream.write(xmlString.getBytes());</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  outStream.flush();</p>
+
+<p>D  &nbsp &nbsp &nbsp  if (!Pattern.matches(""[0-9.]+"", quantity)) {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // Format violation</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   String xmlString = ""<item>\n<description>Widget</description>\n"" +</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   ""<price>500</price>\n"" +</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                  ""<quantity>"" + quantity + ""</quantity></item>"";</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  outStream.write(xmlString.getBytes());</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    outStream.flush();</p>",4,B,,1,3
+1,下列关于类初始化的编码中符合编码规范的是（）,"<p>A &nbsp &nbsp  &nbsp public class Cycle {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   private final int balance;</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private static final Cycle c = new Cycle();</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private static final int deposit = (int) (Math.random() * 100); // Random deposit</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public Cycle() {</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       balance = deposit - 10; // Subtract processing fee</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public static void main(String[] args) {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      System.out.println(""The account balance is: "" + c.balance);</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p>B &nbsp &nbsp &nbsp  public class Cycle {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final int balance;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private static final Cycle c = new Cycle();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private static final int deposit = (int) (Math.random() * 100); // Random deposit</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public Cycle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      balance = deposit - 10; // Subtract processing fee</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public static void main(String[] args) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    System.out.println(""The account balance is: "" + c.balance);</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>C &nbsp &nbsp &nbsp     public class Cycle {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private final int balance;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private static final Cycle c = new Cycle();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private static final int deposit = (int) (Math.random() * 100); // Random deposit</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       public Cycle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       balance = deposit - 10; // Subtract processing fee</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public static void main(String[] args) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      System.out.println(""The account balance is: "" + c.balance);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p>D&nbsp &nbsp &nbsp     public class Cycle {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final int balance;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private static final int deposit = (int) (Math.random() * 100); // Random deposit</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private static final Cycle c = new Cycle();  // Inserted after initialization of required </p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     fields</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public Cycle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      balance = deposit - 10; // Subtract processing fee</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+ 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public static void main(String[] args) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      System.out.println(""The account balance is: "" + c.balance);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>",4,D,,1,3
+1,下列编码符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp     public void arrayEqualsExample() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        int[] arr1 = new int[20]; // initialized to 0</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        int[] arr2 = new int[20]; // initialized to 0</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       Arrays.equals(arr1); // true</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+
+<p>B&nbsp &nbsp &nbsp   public void arrayEqualsExample() {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     int[] arr1 = new int[20]; // initialized to 0</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     int[] arr2 = new int[20]; // initialized to 0</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    Arrays.equals(); // true</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>C&nbsp &nbsp &nbsp    public void arrayEqualsExample() {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      int[] arr1 = new int[20]; // initialized to 0</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     int[] arr2 = new int[20]; // initialized to 0</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    Arrays.equals(arr2); // true</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }
+
+<p>D &nbsp &nbsp &nbsp    public void arrayEqualsExample() {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      int[] arr1 = new int[20]; // initialized to 0</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      int[] arr2 = new int[20]; // initialized to 0</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     Arrays.equals(arr1, arr2); // true</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>",4,D,,1,3
+1,下列编码符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp    public void deleteFile(){</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       File someFile = new File(""someFileName.txt"");</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      someFile.delete();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>B &nbsp &nbsp &nbsp     public void deleteFile(){</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         File someFile = new File(""someFileName.txt"");</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        delete();</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>C &nbsp &nbsp &nbsp     public void deleteFile(){</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        File someFile = new File(""someFileName.txt"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if (!someFile.delete()) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // handle failure to delete the file</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>D &nbsp &nbsp &nbsp     public void deleteFile(a){</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         File someFile = new File(""someFileName.txt"");</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       someFile.delete();</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>",4,C,,1,3
+1,下列关于除法和取模运算的编码中不符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp     if (num2 == 0) {    </p>        
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // handle error</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         } else {</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         result1= num1 /num2;</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           result2= num1 % num2;</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p> 
+
+<p> B &nbsp &nbsp &nbsp   if (num2 == 1) {</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // handle error</p> 
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } else {</p> 
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       result1= num1 /num2;</p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp result2= num1 % num2;</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p> 
+
+<p> C &nbsp &nbsp &nbsp   if (num2 == 2) {</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // handle error</p> 
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } else {</p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        result1= num1 /num2;</p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp result2= num1 % num2;</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p> 
+
+<p> D   &nbsp &nbsp &nbsp  if (num2) {</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // handle error</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } else {</p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        result1= num1 /num2;</p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp result2= num1 % num2;</p> 
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>",4,A,,1,3
+1,下列有关敏感类的编码符合编码规范的是（）,"<p>A  &nbsp &nbsp &nbsp  class SensitiveClass {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // ...</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public final Sensi tiveClass clone() {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p> B &nbsp &nbsp &nbsp   class SensitiveClass {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // ...</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public final SensitiveClass clone() throws CloneNotSupportedException {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       throw new CloneNotSupportedException();</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p> C &nbsp &nbsp &nbsp   class SensitiveClass {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public final SensitiveClass clone(){</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         throw new CloneNotSupportedException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p> D &nbsp &nbsp &nbsp   class SensitiveClass {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       // ...</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public final SensitiveClass clone() throws CloneNotSupportedException {</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp}</p>",4,B,,1,3
+1,下列关于比较类的正确编码规范是（）,"<p>A &nbsp &nbsp &nbsp    // Determine whether object auth has required/expected class object</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    if (auth.getClass().getName().equals(</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     ""com.application.auth.DefaultAuthenticationHandler"")) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // ...</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>B &nbsp &nbsp &nbsp   // Determine whether object auth has required/expected class name</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   if (auth.getClass() = com.application.auth.DefaultAuthenticationHandler.class) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>C &nbsp &nbsp &nbsp   // Determine whether object auth has required/expected class name</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   if (auth.getClass() == com.application.auth.DefaultAuthenticationHandler.class) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   // ...</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>D &nbsp &nbsp &nbsp    // Determine whether object auth has required/expected class object</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if (auth.getClass().getName().equals(</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     ""com.application.auth.DefaultAuthenticationHandler"")) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // ...</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>",4,C,,1,3
+1,下列关于验证方法参数编码中符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp    private Object myState = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      void setState(Object state) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp?   ?if (state == null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??   if (isInvalidState(state)) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??   myState = state;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>B&nbsp &nbsp &nbsp private Object myState = null；</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp?    ?if (isInvalidState(state)) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp???    // Handle invalid state</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??    myState = state;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>C&nbsp &nbsp &nbsp   private Object myState = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     void setState(Object state) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp?     if (state == null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp??    }</p>
+<p>D &nbsp &nbsp &nbsp  private Object myState = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     void setState(Object state) {</p>
+<p>?&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ?if (state == 0) {</p>
+<p>?&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp?????  }</p>
+<p>?&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   ? if (isInvalidState(state)) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>?&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp?    myState = state;</p>
+<p>  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>",4,A,,1,3
+1,关于数组引用的下列编码中符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp    public class XXX {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   private String[] xxxx;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public String[] getXXX() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   return xxxx;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p>B &nbsp &nbsp &nbsp     public class XXX {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   private String[] xxxx;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public String[] getXXX() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   String temp[] = Arrays.copyof(…); </p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   return temp;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>C &nbsp &nbsp &nbsp     public class XXX {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private String[] xxxx;</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp public String[] getXXX() {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      Public  String[];</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   return xxxx;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>D &nbsp &nbsp &nbsp    public class XXX {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private String[] xxxx;</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public String[] getXXX() {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      Private String[]</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     return xxxx;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>",4,B,,1,3
+1,下列关于捕获异常的编码中符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp     class Foo implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (InterruptedException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+  
+<p>B&nbsp &nbsp &nbsp       class Foo implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (InterruptedException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           Thread.currentThread();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+ 
+<p>C&nbsp &nbsp &nbsp     class Foo implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (InterruptedException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           currentThread().interrupt();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>D &nbsp &nbsp &nbsp    class Foo implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (InterruptedException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      Thread.currentThread().interrupt(); </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>",4,D,,1,3
+1,关于异常敏感信息得编码下列符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp   try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      FileInputStream fis =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          new FileInputStream(System.getenv(""APPDATA"") + args[0]);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (FileNotFoundException e) {</p>
+   
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    throw new IOException(""Unable to retrieve file"", e);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+ 
+<p>B &nbsp &nbsp &nbsp  class ExceptionExample {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public static void main(String[] args) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      File file = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      file = new File(System.getenv(""APPDATA"") +</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             args[0]).getCanonicalFile();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      if (!file.getPath().startsWith(""c:\\homepath"")) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        log.error(""Invalid file"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        return;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (IOException x) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     log.error(""Invalid file"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      FileInputStream fis = new FileInputStream(file);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (FileNotFoundException x) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      log.error(""Invalid file"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>C &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      FileInputStream fis =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          new FileInputStream(System.getenv(""APPDATA"") + args[]);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (FileNotFoundException e) {</p>
+   
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    throw new IOException(""Unable to retrieve file"", e);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+   
+<p>D &nbsp &nbsp &nbsp  try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      FileInputStream fis =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          new FileInputStream(System.getenv(""APPDATA"") + args[0]);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (FileNotFoundException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    throw new IOException(""Unable to retrieve file"", );</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>",4,B,,1,3
+1,下列编码中符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp   boolean isCapitalized(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            if (s == null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          throw new NullPointerException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           private void doSomething() throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p>B &nbsp &nbsp &nbsp  boolean isCapitalized(String s) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       if (s == null) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       throw new RuntimeException(""Null String"");</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         private void doSomething() throws Exception {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          //...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>C &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   boolean isCapitalized(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        if (s == null) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       throw new Exception(""Null String"");</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          private void doSomething() throws Exception {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          //...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>D &nbsp &nbsp &nbsp     boolean isCapitalized(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if (s == null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        throw new Throwable(""Null String"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          private void doSomething() throws Exception {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          //...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>",4,A,,1,3
+1,下列编码符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp   boolean isName(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         String names[] = s.split("" "");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           if (names.length != 2) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         return (isCapitalized(names[0]) && isCapitalized(names[1]));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (NullPointerException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>B    boolean isName(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         String names[] = s.split("" "");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             if (names.length != 2) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         return (isCapitalized(names[0]) && isCapitalized(names[1]));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (Exception e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>C&nbsp &nbsp &nbsp    boolean isName(String s) /* throws NullPointerException */ {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       String names[] = s.split("" "");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        if (names.length != 2) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return (isCapitalized(names[0]) && isCapitalized(names[1]));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+
+<p>D &nbsp &nbsp &nbsp   boolean isName(String s) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       String names[] = s.split("" "");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       if (names.length != 2) {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     return (isCapitalized(names[0]) && isCapitalized(names[1]));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     } catch (NullPointerException();) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>",4,C,,1,3
+1,下列编码符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp    final class ControlledStop implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           private  boolean done = false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                while (!done) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp              // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                Thread.currentThread().sleep(1000); // Do something</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         } catch(InterruptedException ie) { </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           Thread.currentThread().interrupt(); // Reset interrupted status</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         } </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }    </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public void shutdown() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         done = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }  </p>
+<p> B&nbsp &nbsp &nbsp     final class ControlledStop implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          private volatile boolean done = false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          while (!done) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           Thread.currentThread().sleep(1000); // Do something</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } catch(InterruptedException ie) { </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        Thread.currentThread().interrupt(); // Reset interrupted status</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            } </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }    </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           public void shutdown() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         done = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>C&nbsp &nbsp &nbsp       final class ControlledStop implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            private boolean done = false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp              while (!isDone()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp               try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                Thread.currentThread().sleep(1000); // Do something</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           } catch(InterruptedException ie) { </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          Thread.currentThread().interrupt(); // Reset interrupted status</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         } </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }    </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public  boolean isDone() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       return done;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         public  void shutdown() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         done = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } </p>
+<p>D &nbsp &nbsp &nbsp    final class ControlledStop implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         private boolean done = false;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            while (!isDone()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp               try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                  // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                Thread.currentThread().sleep(1000); // Do something</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp              } catch(InterruptedException ie) { </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            Thread.currentThread().interrupt(); // Reset interrupted status</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            } </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }   </p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           public  boolean isDone() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp               return done;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             public synchronized void shutdown() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp               done = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>",4,B,,1,3
+1,下列关于确保共享变量编码中符合编码规范的是（）,"<p>A &nbsp &nbsp &nbsp    final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          private volatile boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          public synchronized void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     private boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     private final ReadWriteLock lock = new ReentrantReadWriteLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     private final Lock readLock = lock.readLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     private final Lock writeLock = lock.writeLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     writeLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      writeLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     readLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      readLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+
+<p>B &nbsp &nbsp &nbsp   final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  private volatile boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public synchronized void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  private boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  private final ReadWriteLock lock = new ReentrantReadWriteLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    writeLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      writeLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    readLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      readLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+ 
+<p>C&nbsp &nbsp &nbsp    final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      Private  boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public synchronized void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private final ReadWriteLock lock = new ReentrantReadWriteLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private final Lock readLock = lock.readLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private final Lock writeLock = lock.writeLock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    public void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    writeLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      writeLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    readLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      readLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>D&nbsp &nbsp &nbsp   final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private  boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public synchronized void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      final class Flag {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private boolean flag = true;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public void toggle() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      writeLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      flag ^= true; // Same as flag = !flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      writeLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    public boolean getFlag() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    readLock.lock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      return flag;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      readLock.unlock();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>",4,A,,1,3
+1,关于执行阻塞操作的线程操作的编码下列符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp     public final class SocketReader implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          private final SocketChannel sc;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         private final Object lock = new Object();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public SocketReader(String host, int port) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        sc = SocketChannel.open(new InetSocketAddress(host, port));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ByteBuffer buf = ByteBuffer.allocate(1024);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            synchronized (lock) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            while (!Thread.interrupted()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           sc.read(buf);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // ...</p>
+<p>&nbsp &nbsp &nbspc &nbsp &nbsp &nbsp           }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          } catch (IOException ie) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          // Forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       public static void main(String[] args) </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp               throws IOException, InterruptedException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       SocketReader reader = new SocketReader(""somehost"", 25);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         Thread thread = new Thread(reader);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        thread.start();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         thread.interrupt();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>B&nbsp &nbsp &nbsp    public final class SocketReader implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final SocketChannel sc;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final Object lock = new Object();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public SocketReader(String host, int port) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      sc = SocketChannel.open(new InetSocketAddress(host, port));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     ByteBuffer buf = ByteBuffer.allocate(1024);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      synchronized (lock) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        while (!Thread.interrupted()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          sc.read(buf);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } catch (IOException ie) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // Forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       public static void main(String[] args) </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            throws IOException, InterruptedException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       SocketReader reader = new SocketReader(""somehost"", 25);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       Thread thread = new Thread(reader);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       thread.start();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       Thread.sleep(1000);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p> C&nbsp &nbsp &nbsp     public final class SocketReader implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       private final SocketChannel sc;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final Object lock = new Object();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public SocketReader(String host, int port) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      sc = SocketChannel.open(new InetSocketAddress(host, port));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      @Override public void run() {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      ByteBuffer buf = ByteBuffer.allocate(1024);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       synchronized (lock) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         while (!Thread.interrupted()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           sc.read(buf);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     } catch (IOException ie) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      // Forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   } </p>
+<p>D&nbsp &nbsp &nbsp     public final class SocketReader implements Runnable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final SocketChannel sc;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      private final Object lock = new Object();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public SocketReader(String host, int port) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      sc = SocketChannel.open(new InetSocketAddress(host, port));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     @Override public void run() {</p>
+<p&nbsp &nbsp &nbsp nbsp &nbsp &nbsp      ByteBuffer buf = ByteBuffer.allocate(1024);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        synchronized (lock) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          while (!Thread.interrupted()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             sc.read(buf);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      } catch (IOException ie) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // Forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      public static void main(String[] args) </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         throws IOException, InterruptedException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        SocketReader reader = new SocketReader(""somehost"", 25);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        Thread thread = new Thread(reader);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>",4,A,,1,3
+1,下列编码符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp    File file = new File(args[0]);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      file.delete(); </p>
+<p>B&nbsp &nbsp &nbsp   File file = new File(""file"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      file.delete();</p>
+
+<p>C&nbsp &nbsp &nbsp   File file = new File(""file"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if (!file.delete()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     log.error(""Deletion failed"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>D&nbsp &nbsp &nbsp   File file = new File(args[0]);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if (!file.delete()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     log.error(""Deletion failed"");</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>",4,C,,1,3
+1,关于释放资源的编码，下列符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           final FileInputStream stream = new FileInputStream(fileName);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             final BufferedReader bufRead =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                new BufferedReader(new InputStreamReader(stream));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           String line;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          while ((line = bufRead.readLine()) != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           sendLine(line);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       if (stream != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                    } </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>B&nbsp &nbsp &nbsp     try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       final FileInputStream stream = new FileInputStream(fileName);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         final BufferedReader bufRead =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         new BufferedReader(new InputStreamReader(stream));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        String line;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          while ((line = bufRead.readLine()) != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if (stream != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          stream.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+
+<p>C     try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          final FileInputStream stream = new FileInputStream(fileName);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          final BufferedReader bufRead =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        new BufferedReader(new InputStreamReader(stream));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        String line;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       while ((line = bufRead.readLine()) != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       sendLine(line);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       if (stream != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        stream.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   } </p>
+
+<p>D&nbsp &nbsp &nbsp     try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        final FileInputStream stream = new FileInputStream(fileName);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         final BufferedReader bufRead =</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        new BufferedReader(new InputStreamReader(stream));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         String line;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         while ((line = bufRead.readLine()) != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           sendLine(line);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          if (stream != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          stream.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } catch (IOException e) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       // forward to handler</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>",4,D,,1,3
+1,下列关于序列化的编码不符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp   class SensitiveClass extends Number {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     // ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   protected final Object writeObject(java.io.ObjectOutputStream out) throws</p>      
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   NotSerializableException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      throw new NotSerializableException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>B&nbsp &nbsp &nbsp     class SensitiveClass extends Number {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        protected final Object throws  </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         NotSerializableException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        throw new NotSerializableException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>C&nbsp &nbsp &nbsp       class SensitiveClass extends Number {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        protected final Object readObject(java.io.ObjectInputStream in) throws </p> 
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         NotSerializableException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        throw new NotSerializableException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>D&nbsp &nbsp &nbsp    class SensitiveClass extends Number {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       protected final Object readObjectNoData(java.io.ObjectInputStream in) throws</p>      
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         NotSerializableException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           throw new NotSerializableException();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>",4,B,,1,3
+1,下列关于序列化过程中避免内存和资源泄漏的编码符合编码规则的是（）,"<p>A&nbsp &nbsp &nbsp     class SensorData implements Serializable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         // 1 MB of data per instance!</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          public static SensorData readSensorData() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            public static boolean isAvailable() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspclass SerializeSensorData {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public static void main(String[] args) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ObjectOutputStream out = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      out = new ObjectOutputStream(</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          new BufferedOutputStream(new FileOutputStream(""ser.dat"")));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     while (SensorData.isAvailable()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // note that each SensorData object is 1 MB in size</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        SensorData sd = SensorData.readSensorData();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        out.writeObject(sd);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      if (out != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>B&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     class SensorData implements Serializable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      // 1 MB of data per instance!</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       public static SensorData readSensorData() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public static boolean isAvailable() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    class SerializeSensorData {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       public static void main(String[] args) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ObjectOutputStream out = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           out = new ObjectOutputStream(</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            new BufferedOutputStream(new FileOutputStream(""ser.dat"")));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         while (SensorData.isAvailable()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          // note that each SensorData object is 1 MB in size</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          SensorData sd = SensorData.readSensorData();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.writeObject(sd);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp       } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           if (out != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+
+<p>C&nbsp &nbsp &nbsp     class SerializeSensorData {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        public static void main(String[] args) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       ObjectOutputStream out = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         out = new ObjectOutputStream(</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           new BufferedOutputStream(new FileOutputStream(""ser.dat"")));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         while (SensorData.isAvailable()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           // note that each SensorData object is 1 MB in size</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           SensorData sd = SensorData.readSensorData();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           out.writeObject(sd);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.reset(); // reset the stream</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if (out != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp           out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>D&nbsp &nbsp &nbsp    class SensorData implements Serializable {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 1 MB of data per instance!</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public static SensorData readSensorData() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public static boolean isAvailable() {...}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspclass SerializeSensorData {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public static void main(String[] args) throws IOException {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ObjectOutputStream out = null;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      out = new ObjectOutputStream(</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          new BufferedOutputStream(new FileOutputStream(""ser.dat"")));</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      while (SensorData.isAvailable()) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        // note that each SensorData object is 1 MB in size</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        SensorData sd = SensorData.readSensorData();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        out.writeObject(sd);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    } finally {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      if (out != null) {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>",4,C,,1,3
+1,下列关于排版符合编码规范的是（）,"<p>A&nbsp &nbsp &nbsp    if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      }</p>
+
+<p>B&nbsp &nbsp &nbsp   if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    doStart();}</p>
+
+<p>C&nbsp &nbsp &nbsp   if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>D&nbsp &nbsp &nbsp      if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>",4,A,,1,3
+1,下列编程符合规范的是（）,"<p>    A&nbsp &nbsp &nbsp      if (logger.isDebugEnabled())</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       logger.debug(""Session destroyed,call-id""</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        + event.getSession().getCallId());</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>    B&nbsp &nbsp &nbsp      if (logger.isDebugEnabled())</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         {
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp            logger.debug(""Session destroyed,call-id""</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                + event.getSession().getCallId());</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         }</p>
+
+<p>    C&nbsp &nbsp &nbsp     if (logger.isDebugEnabled())</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        logger.debug(""Session destroyed,call-id""</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp                + event.getSession().getCallId());}</p>
+
+<p>    D&nbsp &nbsp &nbsp      if (logger.isDebugEnabled())</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp             logger.debug(""Session destroyed,call-id""</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       + event.getSession().getCallId());</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>",4,B,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp    Object o = new Object(),Object b = null;</p>
+
+<p>B&nbsp &nbsp &nbsp    Object o = new Object(). Object b = null; </p>
+  
+<p>C&nbsp &nbsp &nbsp    Object o = new Object(),</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       Object b = null;</p>
+
+<p>D&nbsp &nbsp &nbsp    Object o = new Object(); </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       Object b = null;</p>",4,D,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp     if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       case x:</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       int i = 9;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>B&nbsp &nbsp &nbsp     if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   doStart();c=d;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       case x:</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     int i = 9;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>C&nbsp &nbsp &nbsp    if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       case x:</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      int i = 9;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>    D&nbsp &nbsp &nbsp    if (a>b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       case x:</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp int i = 9;}</p>",4,A,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp   if(a > b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   return;</p>
+
+<p>B&nbsp &nbsp &nbsp    if(a > b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   return;</p>
+
+<p>C&nbsp &nbsp &nbsp     if(a > b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    return;</p>
+
+<p>D&nbsp &nbsp &nbsp     if(a > b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       {doStart();}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     return;</p>",4,C,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp    if (a== b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  objectA.doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp a *= 2;</p>
+
+<p>B&nbsp &nbsp &nbsp    if (a == b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     objectA.doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp a *= 2;</p>
+
+<p>C&nbsp &nbsp &nbsp    if (a ==b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    objectA.doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspa *= 2;</p>
+
+<p>D&nbsp &nbsp &nbsp    if (a == b)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     objectA.doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspa*= 2;</p>",4,B,,1,3
+1,下列编程符合规范的是（）,"<p>A   public  final static String str = “abc”;</p>
+<p>B   public static final String str = abc;</p>
+<p>C   public static final  str = “abc”;</p>
+<p>D   public static final String str = “abc”;</p>",4,D,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp    <html></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>一句话简述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>详细描述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>产品模块名称和版本</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <br>公司版权信息</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </html></p>
+
+<p>B&nbsp &nbsp &nbsp       <html></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <p>一句话简述。<p>详细描述。<p>产品模块名称和版本</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    <br>公司版权信息</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </html></p>
+
+<p>C&nbsp &nbsp &nbsp         <html></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>一句话简述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>详细描述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     <p>产品模块名称和版本<br>公司版权信息</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    </html></p>
+
+<p>D&nbsp &nbsp &nbsp       <html></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   <body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      <p>一句话简述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      <p>详细描述。</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   <p>产品模块名称和版本</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   <br>公司版权信息</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   </body></p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   </html></p>",4,A,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp    /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     **/</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     private String logType;</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     public void write()</p>
+
+<p>    B&nbsp &nbsp &nbsp    /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private String logType;</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    **/</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    public void write()</p>
+
+<p>   C&nbsp &nbsp &nbsp    /*</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  private String logType;</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  public void write()</p>
+
+<p>   D&nbsp &nbsp &nbsp    /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    private String logType;</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   /**</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     * 注释内容</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public void write()</p>",4,D,,1,3
+1,下列编程符合规范的是（）,"<p>    A&nbsp &nbsp &nbsp  /*</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp public void example2( )</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock One</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+   
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp CodeBlock Two</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp /*</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp */</p>
+
+
+<p>   B&nbsp &nbsp &nbsp  /*</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp public void example2( )</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        CodeBlock One</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     // 注释</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock Two</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp/*</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp*/</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   C  /*</p>
+ <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp* 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp*/</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp public void example2( )</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock One</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock Two</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp/*</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp*/</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  D  /*</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp * 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp */</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp public void example2( )</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock One</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    CodeBlock Two</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp /*</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp* 注释</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp */</p>",4,D,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp   public void doRequest(SipServletRequest req) throws</p>     
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ServletException,IOException</p>
+
+<p>B&nbsp &nbsp &nbsp   @Override</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  Public void doRequest(SipServletRequest req) throws</p>    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      ServletException,IOException</p>
+
+<p>C&nbsp &nbsp &nbsp   @Override</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public void doRequest(SipServletRequest req) throws</p>    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      ServletException,</p>
+   
+<p>D&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    @Override</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   public void doRequest(SipServletRequest req) throws   </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      IOException</p>",4,B,,1,3
+1,下列编程符合规范的是（）,"<p>A&nbsp &nbsp &nbsp    // 如果 receiveFlag 为假</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      if (!receiveFlag)</p>
+<p>B&nbsp &nbsp &nbsp    // 如果 receiveFlag 不等于0</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      if (receiveFlag!=0)</p>
+
+<p>C&nbsp &nbsp &nbsp   // 如果从连结收到消息 </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if (receiveFlag)</p>
+<p>D&nbsp &nbsp &nbsp   // 如果 receiveFlag等于0</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if (receiveFlag==0)</p>",4,C,,1,3
+1,31、下列关于类名和接口使用类意义完整的英文描述，符合编码规范的是（）,"<p>A   OrderInformation,</p>
+<p>B   CUSTOMERList</p>
+<p>C    logmanager</p>
+<p>D   Smptransaction</p>",4,A,,1,3
+1,下列关于方法名使用类意义完整的英文描述符合规范的是（）,"<p>   A   private void CalculateRate();</p>
+
+<p>    B   public void addnewOrder();</p>
+
+<p>    C   public void addNewOrder();</p>
+
+<p>    D   private void calculaterate();</p>",4,C,,1,3
+1,下列关于属性名使用意义完整的英文描述符合规范的是（）,"<p>    A   private CustomerName;</p>
+
+<p>    B   private ordernumber;</p>
+
+<p>    C   private smpSession;</p>
+
+<p>    D   private Smpsession;</p>",4,C,,1,3
+1,下列关于常量名的英文描述符合规范的是（）,"<p>    A   public static final int max_VALUE = 1000;</p>
+<p>    B   public static final String DEFAULT_START_DATE = ""2001-12-08"";</p>
+<p>    C   public static final String DEFAULTSTART_DATE = ""2001-12-08"";</p>
+<p>    D   public static final int max_value = 1000;</p>",4,B,,1,3
+1,下列关于常用组件类的命名描述符合规范的是（）,"<p>    A   Application 类型的，——MainApp</p>
+<p>    B   Frame 类型的，——Topoframe</p>
+<p>    C   Bean 类型的，——DataAccessbean</p>
+<p>    D   Applet 类型的，——PictureShow</p>",4,A,,1,3
+1,下列是函数名的缩写，其中符合规范的是（）,"      <p>A   getCustomerInfo()</p>
+ <p>B   getCustomerInformation</p>
+ <p>   C   getCustomerinfo()</p>
+  <p>  D   getcustomerinfo()</p>",4,A,,1,3
+1,下列是有关数据库操作、IO操作的编码，其中符合编码规范的是（）,"<p>    A&nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      // ... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    finally</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsptry</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          in.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    B   try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // ... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch(IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp finally</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    C   try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // ... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch(IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp finally</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          in.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>    D&nbsp &nbsp &nbsp   try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    // ... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch(IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp finally</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         out.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp          in.close();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         //... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>",4,D,,1,3
+1,下列对系统非正常运行产生的异常捕获的处理编程符合规范的是（）,"<p>   A&nbsp &nbsp &nbsp   try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    //.... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+ 
+<p>    B&nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    //.... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    logger.error();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>    C&nbsp &nbsp &nbsp    try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    //.... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch (IOException ioe)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    logger.error(ioe);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+
+<p>     D &nbsp &nbsp &nbsp  try</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    //.... ...</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp catch ()</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    logger.error(ioe);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>",4,C,,1,3
+1,下列是有关运算符的编码，其中符合规范的是（）,"<p>A &nbsp &nbsp &nbsp  word = high << 8 | low  </p>   
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if ((a | b) && (a & c))  </p>     
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if ((a | b) < (c & d))</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    B   word = (high << 8) | low </p>    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   if ((a | b) && (a & c))  </p>    
+ <p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        if ((a | b) < (c & d))</p>
+<p>C&nbsp &nbsp &nbsp   word = (high << 8) | low </p>    
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if (a | b && (a & c))   </p>    
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        if ((a | b) < (c & d))</p>
+
+<p>D&nbsp &nbsp &nbsp  word = (high << 8) | low</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp     if ((a | b) && (a & c))</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         if ((a | b) < c & d)</p>",4,B,,1,3
+1,关于数组声明的代码，符合规范的是（）,"<p>    A&nbsp &nbsp &nbsp   public int()getIndex()[]</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+
+<p>    B&nbsp &nbsp &nbsp   public int[] getIndex()</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+
+<p>    C&nbsp &nbsp &nbsp     public int getIndex()</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ....</p>
+<p>&nbsp &nbsp &nbsp  }</p>
+
+<p>    D &nbsp &nbsp &nbsp  public int getIndex()[]</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp }</p>",4,B,,1,3
+1,下列关于判断语句编程符合规范的是（）,"<p>  A&nbsp &nbsp &nbsp   if (ok = true)</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ……</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>  B&nbsp &nbsp &nbsp   if (ok == true)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ……</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>  C &nbsp &nbsp &nbsp  if  (true)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ……</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       }</p>
+<p>D&nbsp &nbsp &nbsp   if (ok)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         ……</p>
+<p> &nbsp &nbsp &nbsp      }</p>",4,D,,1,3
+1,下列大量字符串的相加符合编程规范的是（）,"<p>    A&nbsp &nbsp &nbsp   StringBuffer sb = new StringBuffer();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sb.append(“aa”);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sb.append(“bb”);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sb.append(“cc”);</p>
+
+ <p>   B&nbsp &nbsp &nbsp   String str = “”;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sb.append(“aa”);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp sb.append(“bb”);</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  sb.append(“cc”);</p>
+
+ <p>   C&nbsp &nbsp &nbsp   String str = “”;</p>
+ <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp str += ”a”;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp str += ”b”;</p>
+
+ <p>   D&nbsp &nbsp &nbsp   String str = “”;</p>
+ <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp str += a;</p>
+ <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp str += ”b”;</p>",4,A,,1,3
+1,下列关于IO操作流使用的编程符合规范的是（）,"<p>A</p>   
+<p>&nbsp &nbsp &nbsp    FileOutputStream file= new FileOutputStream(""test.txt"");</p>
+<p>BufferedOutputStream out =  new  </p>
+<p>BufferedOutputStream(file);</p>
+<p>&nbsp &nbsp &nbsp   for (int i = 0; i < bytes.length; i++ )</p>
+<p>{</p>
+<p> &nbsp &nbsp &nbsp         out.write(…);</p>
+<p>}</p>
+<p>&nbsp &nbsp &nbsp    out.flush();</p>
+
+<p>B </p> 
+<p>FileOutputStream file= new FileOutputStream(""test.txt"");</p>
+<p>&nbsp &nbsp &nbsp     for (int i = 0; i < bytes.length; i++ )</p>
+<p>{</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         out.write(…);</p>
+<p>}
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   out.flush();</p>
+ 
+<p>C   </p>
+<p>FileOutputStream file= new FileOutputStream(""test.txt"");</p>
+<p> &nbsp &nbsp &nbsp    BufferedOutputStream out =  new  </p>
+<p>  &nbsp &nbsp &nbsp   BufferedOutputStream(file);</p>
+<p> &nbsp &nbsp &nbsp    for (int i = 0; i < bytes.length; i++ )</p>
+<p>&nbsp &nbsp &nbsp{</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp         out.write(…);</p>
+<p>&nbsp &nbsp &nbsp}</p>
+
+<p>D   </p>
+<p>FileOutputStream file= new FileOutputStream(""test.txt"");</p>
+<p>BufferedOutputStream out =  new </p>
+<p>BufferedOutputStream(file);</p>
+<p>&nbsp &nbsp &nbsp   for (int i = 0; i < bytes.length; i++ )</p>
+<p>&nbsp &nbsp &nbsp{</p>
+         
+<p>&nbsp &nbsp &nbsp}</p>
+<p>&nbsp &nbsp &nbsp    out.flush();</p>",4,A,,1,3
+1,下列有关编程符合规范的是（）,"<p>   A&nbsp &nbsp &nbsp   ArrayList list = new ArrayList();</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       list.add....</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp       String [] array = new String[list.size()];</p>
+
+<p>   B&nbsp &nbsp &nbsp   ArrayList list = new ArrayList();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp list.add....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        String [] array = new String[];</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      list.toArray(array);</p>
+
+<p>   C&nbsp &nbsp &nbsp   ArrayList list = new ArrayList();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        list.add....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        String [] array = new String[list.size()];</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      list.toArray(array);</p>
+
+<p>   D&nbsp &nbsp &nbsp   ArrayList list = new ArrayList();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        list.add....</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp        String [] array = new String[list.size()];</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      list.toArray();</p>",4,C,,1,3
+1,下列编程符合规范的是（）,"<p>    A&nbsp &nbsp &nbsp    public enum EnumDemo </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ERROR,INFO,DEBUG</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   In other function：</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   EnumDemo t = EnumDemo.DEBUG;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   if (t == EnumDemo.ERROR)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    。。。。。。           </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>    B&nbsp &nbsp &nbsp    public enum EnumDemo </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ERROR,INFO,DEBUG</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   In other function：</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   EnumDemo t = EnumDemo.DEBUG;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   if (t == EnumDemo.ERROR)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    。。。。。。           </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>   C&nbsp &nbsp &nbsp    public enum EnumDemo </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ERROR,INFO,DEBUG</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  In other function：</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  EnumDemo t = EnumDemo.DEBUG;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  if (t == EnumDemo.ERROR)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    。。。。。。           </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+
+<p>    D&nbsp &nbsp &nbsp    public enum EnumDemo </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    ERROR,INFO,DEBUG</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    In other function：</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    EnumDemo t = EnumDemo.DEBUG;</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    if (t == EnumDemo.ERROR)</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      。。。。。。           </p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    }</p>",4,D,,1,3
+1,下列有关定义常量的代码符合规范的是（）,"<p>     A &nbsp &nbsp &nbsp  static interface InterfaceT</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    String TT = ""abcl"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    void doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>    B&nbsp &nbsp &nbsp    interface InterfaceT</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  {
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp String TT = ""abcl"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    void doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>
+
+<p>    C&nbsp &nbsp &nbsp     public interface InterfaceT</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {</p>
+<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   String TT = ""abcl"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp    void doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  }</p>
+ 
+<p>    D&nbsp &nbsp &nbsp    final interface InterfaceT</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   {</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      String TT = ""abcl"";</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp      void doStart();</p>
+<p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp   }</p>",4,B,,1,3
+1,下列编程符合规范的是（）,"<p>    A&nbsp &nbsp &nbsp   rect.length = 10;</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp rect.width = 5;</p>
+
+<p>     B&nbsp &nbsp &nbsp   rect.length = 10;</p>
+
+<p>     C&nbsp &nbsp &nbsp   rect.width = 5;</p>
+
+<p>     D&nbsp &nbsp &nbsp   rectlength = 10,</p>
+<p>    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp rect.width = 5;</p>",4,A,,1,3

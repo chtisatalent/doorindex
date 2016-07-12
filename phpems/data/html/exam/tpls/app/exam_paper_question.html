@@ -1,0 +1,1414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="title" content="无纸化模拟考试系统">
+<meta name="description" content="无纸化模拟考试系统">
+<meta name="keywords" content="无纸化模拟考试系统">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>考试系统</title>
+<link href="app/core/styles/css/bootstrap.css" rel="stylesheet">
+<link href="app/core/styles/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="app/core/styles/css/plugin.css" rel="stylesheet">
+<link href="app/user/styles/css/theme.css" rel="stylesheet" type="text/css" />
+<link href="app/core/styles/css/datetimepicker.css" rel="stylesheet">
+<script type="text/javascript" src="app/core/styles/js/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" href="app/exam/styles/css/mathquill.css" type="text/css">
+<script type="text/javascript" src="app/core/styles/js/jquery-ui.js"></script>
+<script type="text/javascript" src="app/core/styles/js/jquery.json.js"></script>
+<script type="text/javascript" src="app/core/styles/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/core/styles/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="app/core/styles/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="app/core/styles/js/swfu/swfupload.js"></script>
+<!--
+<script type="text/javascript" src="app/core/styles/js/fingerprint/fingerprint.js"></script>
+<script type="text/javascript" src="app/core/styles/js/fingerprint/plugin.js"></script>
+-->
+<script type="text/javascript" src="app/core/styles/js/plugin.js"></script>
+<script src="app/exam/styles/js/plugin.js"></script>
+</head><body>
+<div class="row-fluid topLine">
+	<div class="container-fluid">
+		<div class="span4"></div>
+		<div class="span8">
+			<span class="pull-right">
+						您好（七夕快乐）&nbsp;&nbsp;<!--<a href="index.php?user-center"><em class="icon-user"></em> 用户中心</a>&nbsp;&nbsp;<a class="ajax" href="index.php?user-app-logout"><em class="icon-lock"></em> 退出</a>-->						&nbsp;&nbsp;&nbsp;&nbsp;
+			</span>
+		</div>
+	</div>
+</div>
+<div class="row-fluid top">
+	<div class="container-fluid">
+		<div class="span4"><a name="top"></a><h2><img src="app/user/styles/img/theme/logo.png" /></h2></div>
+		<div class="span8">
+			<div class="navbar" id="menuNav">
+				<div class="">
+					<div class="nav-collapse">
+						<ul class="nav pull-right">
+							<!--<li class="mainmenu">
+								<a href="index.php">网站首页</a>
+							</li>
+							<li class="active mainmenu">
+								<a href="index.php?exam">在线考试</a>
+							</li>-->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><div aria-hidden="true" id="modal" class="modal hide fade" role="dialog" aria-labelledby="#myModalLabel">
+	<div class="modal-header">
+		<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+		<h3 id="myModalLabel">
+			试题列表
+		</h3>
+	</div>
+	<div class="modal-body" id="modal-body" style="max-height:560px;">
+				    	    	                <dl class="clear">
+        	<dt class="float_l"><b>1、单选题</b></dt>
+            <dd>
+            	                                                            	<a id="sign_352" href="javascript:;" onclick="javascript:gotoquestion(352,1);" rel="0" class="badge questionindex">1</a>
+            	                                            	<a id="sign_353" href="javascript:;" onclick="javascript:gotoquestion(353,1);" rel="0" class="badge questionindex">2</a>
+            	                                            	<a id="sign_354" href="javascript:;" onclick="javascript:gotoquestion(354,1);" rel="0" class="badge questionindex">3</a>
+            	                                            	<a id="sign_355" href="javascript:;" onclick="javascript:gotoquestion(355,1);" rel="0" class="badge questionindex">4</a>
+            	                                            	<a id="sign_356" href="javascript:;" onclick="javascript:gotoquestion(356,1);" rel="0" class="badge questionindex">5</a>
+            	                                            	<a id="sign_357" href="javascript:;" onclick="javascript:gotoquestion(357,1);" rel="0" class="badge questionindex">6</a>
+            	                                            	<a id="sign_358" href="javascript:;" onclick="javascript:gotoquestion(358,1);" rel="0" class="badge questionindex">7</a>
+            	                                            	<a id="sign_359" href="javascript:;" onclick="javascript:gotoquestion(359,1);" rel="0" class="badge questionindex">8</a>
+            	                                            	<a id="sign_360" href="javascript:;" onclick="javascript:gotoquestion(360,1);" rel="0" class="badge questionindex">9</a>
+            	                                            	<a id="sign_361" href="javascript:;" onclick="javascript:gotoquestion(361,1);" rel="0" class="badge questionindex">10</a>
+            	                                            	<a id="sign_362" href="javascript:;" onclick="javascript:gotoquestion(362,1);" rel="0" class="badge questionindex">11</a>
+            	                                            	<a id="sign_363" href="javascript:;" onclick="javascript:gotoquestion(363,1);" rel="0" class="badge questionindex">12</a>
+            	                                            	<a id="sign_364" href="javascript:;" onclick="javascript:gotoquestion(364,1);" rel="0" class="badge questionindex">13</a>
+            	                                            	<a id="sign_365" href="javascript:;" onclick="javascript:gotoquestion(365,1);" rel="0" class="badge questionindex">14</a>
+            	                                            	<a id="sign_366" href="javascript:;" onclick="javascript:gotoquestion(366,1);" rel="0" class="badge questionindex">15</a>
+            	                                            	<a id="sign_367" href="javascript:;" onclick="javascript:gotoquestion(367,1);" rel="0" class="badge questionindex">16</a>
+            	                                            	<a id="sign_368" href="javascript:;" onclick="javascript:gotoquestion(368,1);" rel="0" class="badge questionindex">17</a>
+            	                                            	<a id="sign_369" href="javascript:;" onclick="javascript:gotoquestion(369,1);" rel="0" class="badge questionindex">18</a>
+            	                                            	<a id="sign_370" href="javascript:;" onclick="javascript:gotoquestion(370,1);" rel="0" class="badge questionindex">19</a>
+            	                                            	<a id="sign_371" href="javascript:;" onclick="javascript:gotoquestion(371,1);" rel="0" class="badge questionindex">20</a>
+            	                                            	<a id="sign_372" href="javascript:;" onclick="javascript:gotoquestion(372,1);" rel="0" class="badge questionindex">21</a>
+            	                                            	<a id="sign_373" href="javascript:;" onclick="javascript:gotoquestion(373,1);" rel="0" class="badge questionindex">22</a>
+            	                                            	<a id="sign_374" href="javascript:;" onclick="javascript:gotoquestion(374,1);" rel="0" class="badge questionindex">23</a>
+            	                                            	<a id="sign_375" href="javascript:;" onclick="javascript:gotoquestion(375,1);" rel="0" class="badge questionindex">24</a>
+            	                                            	<a id="sign_376" href="javascript:;" onclick="javascript:gotoquestion(376,1);" rel="0" class="badge questionindex">25</a>
+            	                                            	<a id="sign_377" href="javascript:;" onclick="javascript:gotoquestion(377,1);" rel="0" class="badge questionindex">26</a>
+            	                                            	<a id="sign_378" href="javascript:;" onclick="javascript:gotoquestion(378,1);" rel="0" class="badge questionindex">27</a>
+            	                                            	<a id="sign_379" href="javascript:;" onclick="javascript:gotoquestion(379,1);" rel="0" class="badge questionindex">28</a>
+            	                                            	<a id="sign_380" href="javascript:;" onclick="javascript:gotoquestion(380,1);" rel="0" class="badge questionindex">29</a>
+            	                                            	<a id="sign_381" href="javascript:;" onclick="javascript:gotoquestion(381,1);" rel="0" class="badge questionindex">30</a>
+            	            	            </dd>
+        </dl>
+                    	            	            	            	        	</div>
+	<div class="modal-footer">
+		 <button aria-hidden="true" class="btn" data-dismiss="modal">隐藏</button>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="container-fluid examcontent">
+		<div class="exambox" id="datacontent">
+			<form class="examform form-horizontal" id="form1" name="form1" method="post" action="index.php?exam-app-exam-score">
+				<ul class="breadcrumb">
+					<li>
+						<span class="icon-home"></span> 考场选择<span class="divider">/</span>
+					</li>
+					<li>
+						中航信信息安全竞赛练习赛<span class="divider">/</span>
+					</li>
+					<li>
+						正式考试 <span class="divider">/</span>
+					</li>
+					<li class="active">
+						中航信信息安全竞赛练习赛					</li>
+				</ul>
+				<h3 class="text-center">中航信信息安全竞赛练习赛</h3>
+																								<div id="panel-type-1" class="questionpanel tab-pane active">
+					<ul class="breadcrumb">
+						<li>
+							<h5>1、单选题</h5>
+						</li>
+					</ul>
+						                	                	                	                <div id="question_352" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">1</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('352',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_352"></a><p>下列编程符合规范的是（）</p><input id="time_352" type="hidden" name="time[352]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、 public final static String str = &ldquo;abc&rdquo;;</p>
+
+<p>B、 public static final String str = abc;</p>
+
+<p>C、public static final str = &ldquo;abc&rdquo;;</p>
+
+<p>D、public static final String str = &ldquo;abc&rdquo;;</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[352]" rel="352" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[352]" rel="352" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[352]" rel="352" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[352]" rel="352" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(1,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_353" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">2</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('353',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_353"></a><p>下列关于类名和接口使用类意义完整的英文描述，符合编码规范的 是（ ）</p><input id="time_353" type="hidden" name="time[353]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、 OrderInformation,</p>
+
+<p>B、CUSTOMERList</p>
+
+<p>C、logmanager</p>
+
+<p>D、Smptransaction</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[353]" rel="353" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[353]" rel="353" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[353]" rel="353" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[353]" rel="353" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(0,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(2,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_354" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">3</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('354',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_354"></a><p>从分析方法上入侵检测分为哪两种类型( )</p><input id="time_354" type="hidden" name="time[354]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、异常检测、网络检测</p>
+
+<p>B、误用检测、异常检测</p>
+
+<p>C、主机检测、网络检测</p>
+
+<p>D、网络检测、误用检测</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[354]" rel="354" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[354]" rel="354" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[354]" rel="354" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[354]" rel="354" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(1,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(3,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_355" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">4</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('355',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_355"></a><p>当备份一个应用程序系统的数据时，以下哪一项是应该首先考虑的关键性问题( )</p><input id="time_355" type="hidden" name="time[355]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、什么时候进行备份</p>
+
+<p>B、在哪里进行备份</p>
+
+<p>C、怎样存储备份</p>
+
+<p>D、需要备份哪些数据</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[355]" rel="355" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[355]" rel="355" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[355]" rel="355" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[355]" rel="355" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(2,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(4,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_356" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">5</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('356',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_356"></a><p>以下哪个可能没有违法破坏计算机信息系统罪( )</p><input id="time_356" type="hidden" name="time[356]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、非法修改计算机的应用程序造成亚种损失</p>
+
+<p>B、某人制作病毒，他人利用此病毒造成危害</p>
+
+<p>C、秘密篡改计算机中的数据，以掩盖自己的非法入侵行为</p>
+
+<p>D、利用计算机进行贪污受贿</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[356]" rel="356" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[356]" rel="356" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[356]" rel="356" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[356]" rel="356" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(3,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(5,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_357" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">6</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('357',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_357"></a><p>依据信息系统安全保证评估框架，确定安全保障需求考虑的因素不包括下面哪一方面( )</p><input id="time_357" type="hidden" name="time[357]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、法规政策的要求</p>
+
+<p>B、系统的价值</p>
+
+<p>C、系统要对抗的威胁</p>
+
+<p>D、系统的技术构成</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[357]" rel="357" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[357]" rel="357" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[357]" rel="357" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[357]" rel="357" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(4,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(6,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_358" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">7</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('358',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_358"></a><p>下面对访问控制技术描述最准确的是:</p><input id="time_358" type="hidden" name="time[358]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、保证系统资源的可靠性</p>
+
+<p>B、实现系统资源的可追查性</p>
+
+<p>C、防止对系统资源的非授权访问</p>
+
+<p>D、保证系统资源的可信性</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[358]" rel="358" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[358]" rel="358" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[358]" rel="358" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[358]" rel="358" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(5,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(7,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_359" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">8</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('359',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_359"></a><p>下列对自主访问控制说法不正确的是:</p><input id="time_359" type="hidden" name="time[359]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、自主访问控制允许客体决定主体对该客体的访问权限</p>
+
+<p>B、自主访问控制具有较好的灵活性和可扩展性</p>
+
+<p>C、自主访问控制可以方便地调整安全策略</p>
+
+<p>D、自主访问控制安全性不高，常用于商业系统</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[359]" rel="359" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[359]" rel="359" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[359]" rel="359" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[359]" rel="359" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(6,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(8,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_360" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">9</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('360',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_360"></a><p>下列对审计系统基本组成描述正确的是：</p><input id="time_360" type="hidden" name="time[360]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、审计系统一般包含三个部分：日志记录、日志分析和日志处理</p>
+
+<p>B、审计系统一般包含两个部分：日志记录和日志处理</p>
+
+<p>C、审计系统一般包含两个部分：日志记录和日志分析</p>
+
+<p>D、审计系统一般包含三个部分：日志记录、日志分析和日志报告</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[360]" rel="360" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[360]" rel="360" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[360]" rel="360" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[360]" rel="360" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(7,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(9,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_361" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">10</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('361',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_361"></a><p>公钥密码的应用不包括：</p><input id="time_361" type="hidden" name="time[361]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、数字签名</p>
+
+<p>B、非安全信道的密钥交换</p>
+
+<p>C、消息认证码</p>
+
+<p>D、身份认证</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[361]" rel="361" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[361]" rel="361" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[361]" rel="361" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[361]" rel="361" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(8,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(10,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_362" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">11</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('362',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_362"></a><p>下列哪一项是虚拟专用网络（VPN）的安全功能( )</p><input id="time_362" type="hidden" name="time[362]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、验证，访问控制和密码</p>
+
+<p>B、隧道，防火墙和拨号</p>
+
+<p>C、加密，鉴别和密钥管理</p>
+
+<p>D、压缩，解密和密码</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[362]" rel="362" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[362]" rel="362" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[362]" rel="362" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[362]" rel="362" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(9,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(11,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_363" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">12</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('363',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_363"></a><p>组成IPSec的主要安全协议不包括以下哪一项( )</p><input id="time_363" type="hidden" name="time[363]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、ESP</p>
+
+<p>B、DSS</p>
+
+<p>C、IKE</p>
+
+<p>D、AH</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[363]" rel="363" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[363]" rel="363" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[363]" rel="363" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[363]" rel="363" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(10,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(12,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_364" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">13</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('364',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_364"></a><p>下面哪一项内容更准确地描述了网络接口层（即数据链路层）可能存在的安全攻击( )</p><input id="time_364" type="hidden" name="time[364]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、ARP欺骗、分片攻击、syn flood 等</p>
+
+<p>B、ARP欺骗、mac flooding，嗅探等</p>
+
+<p>C、死亡之ping、mac flooding、嗅探等</p>
+
+<p>D、IP源地址欺骗、ARP欺骗，嗅探等</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[364]" rel="364" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[364]" rel="364" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[364]" rel="364" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[364]" rel="364" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(11,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(13,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_365" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">14</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('365',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_365"></a><p>下列关于防火墙的主要功能包括：</p><input id="time_365" type="hidden" name="time[365]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、访问控制</p>
+
+<p>B、内容控制</p>
+
+<p>C、数据加密</p>
+
+<p>D、直杀病毒</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[365]" rel="365" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[365]" rel="365" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[365]" rel="365" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[365]" rel="365" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(12,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(14,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_366" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">15</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('366',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_366"></a><p>简单包过滤防火墙主要工作在( )</p><input id="time_366" type="hidden" name="time[366]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、链路层/网络层</p>
+
+<p>B、网络层/传输层</p>
+
+<p>C、应用层</p>
+
+<p>D、会话层</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[366]" rel="366" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[366]" rel="366" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[366]" rel="366" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[366]" rel="366" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(13,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(15,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_367" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">16</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('367',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_367"></a><p>以下对于windows系统的服务描述，正确的是：</p><input id="time_367" type="hidden" name="time[367]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、windows服务必须是一个独立的可执行程序</p>
+
+<p>B、windows服务的运行不需要用户的交互登录</p>
+
+<p>C、windows服务都是随系统启动而祈祷，无需用户进行干预</p>
+
+<p>D、windows服务都需要用户进行登录后，以登录用户的权限进行启动</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[367]" rel="367" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[367]" rel="367" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[367]" rel="367" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[367]" rel="367" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(14,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(16,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_368" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">17</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('368',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_368"></a><p>身份鉴别是安全服务中的重要一环，以下关于身份鉴别叙述不正确的是( )</p><input id="time_368" type="hidden" name="time[368]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、身份鉴别是授权控制的基础</p>
+
+<p>B、身份鉴别一般不用提供双向的认证</p>
+
+<p>C、目前一般采用基于对称密钥加密或公开密钥加密的方法</p>
+
+<p>D、数字签名机制是实现身份鉴别的重要机制</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[368]" rel="368" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[368]" rel="368" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[368]" rel="368" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[368]" rel="368" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(15,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(17,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_369" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">18</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('369',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_369"></a><p>网络病毒的传播媒介是( )</p><input id="time_369" type="hidden" name="time[369]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、硬盘</p>
+
+<p>B、磁盘</p>
+
+<p>C、网络通道</p>
+
+<p>D、内存</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[369]" rel="369" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[369]" rel="369" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[369]" rel="369" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[369]" rel="369" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(16,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(18,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_370" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">19</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('370',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_370"></a><p>信息安全的基本属性是( )</p><input id="time_370" type="hidden" name="time[370]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、机密性</p>
+
+<p>B、可用性</p>
+
+<p>C、完整性</p>
+
+<p>D、上面3项都是</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[370]" rel="370" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[370]" rel="370" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[370]" rel="370" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[370]" rel="370" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(17,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(19,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_371" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">20</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('371',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_371"></a><p>将公司与外部供应商、客户及其他利益相关群体相连接的是( )</p><input id="time_371" type="hidden" name="time[371]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、内联网VPN</p>
+
+<p>B、外联网VPN</p>
+
+<p>C、远程接入VPN</p>
+
+<p>D、无线VPN</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[371]" rel="371" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[371]" rel="371" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[371]" rel="371" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[371]" rel="371" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(18,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(20,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_372" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">21</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('372',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_372"></a><p>下列哪种隐藏属于文本的语义隐藏( )</p><input id="time_372" type="hidden" name="time[372]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、根据文字表达的多样性进行同义词置换</p>
+
+<p>B、在文件头、尾嵌入数据</p>
+
+<p>C、修改文字的字体来隐藏信息</p>
+
+<p>D、对文本的字、行、段等位置做少量修改</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[372]" rel="372" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[372]" rel="372" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[372]" rel="372" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[372]" rel="372" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(19,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(21,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_373" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">22</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('373',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_373"></a><p>为了保证数据库应用系统正常运行，数据库管理员在日常工作中需要对数据库进行维护。下列一般不属于数据库管理员日常维护工作的是( )</p><input id="time_373" type="hidden" name="time[373]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、数据内容的一致性维护</p>
+
+<p>B、数据库备份与恢复</p>
+
+<p>C、数据库安全性维护</p>
+
+<p>D、数据库存储空间管理</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[373]" rel="373" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[373]" rel="373" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[373]" rel="373" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[373]" rel="373" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(20,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(22,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_374" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">23</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('374',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_374"></a><p>下列关于方法名使用类意义完整的英文描述符合规范的是( )</p><input id="time_374" type="hidden" name="time[374]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、private void CalculateRate();</p>
+
+<p>B、public void addnewOrder();</p>
+
+<p>C、public void addNewOrder();</p>
+
+<p>D、private void calculaterate();</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[374]" rel="374" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[374]" rel="374" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[374]" rel="374" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[374]" rel="374" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(21,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(23,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_375" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">24</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('375',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_375"></a><p>下列关于属性名使用意义完整的英文描述符合规范的是( )</p><input id="time_375" type="hidden" name="time[375]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、private CustomerName;</p>
+
+<p>B、private ordernumber;</p>
+
+<p>C、private smpSession;</p>
+
+<p>D、private Smpsession;</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[375]" rel="375" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[375]" rel="375" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[375]" rel="375" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[375]" rel="375" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(22,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(24,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_376" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">25</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('376',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_376"></a><p>下列关于常量名的英文描述符合规范的是( )</p><input id="time_376" type="hidden" name="time[376]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、public static final int max_VALUE = 1000;</p>
+
+<p>B、public static final String DEFAULT_START_DATE = &quot;2001-12-08&quot;;</p>
+
+<p>C、public static final String DEFAULTSTART_DATE = &quot;2001-12-08&quot;;</p>
+
+<p>D、public static final int max_value = 1000;</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[376]" rel="376" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[376]" rel="376" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[376]" rel="376" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[376]" rel="376" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(23,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(25,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_377" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">26</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('377',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_377"></a><p>下列关于常用组件类的命名描述符合规范的是( )</p><input id="time_377" type="hidden" name="time[377]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、Application 类型的，&mdash;&mdash;MainApp</p>
+
+<p>B、Frame 类型的，&mdash;&mdash;Topoframe</p>
+
+<p>C、Bean 类型的，&mdash;&mdash;DataAccessbean</p>
+
+<p>D、Applet 类型的，&mdash;&mdash;PictureShow</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[377]" rel="377" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[377]" rel="377" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[377]" rel="377" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[377]" rel="377" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(24,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(26,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_378" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">27</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('378',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_378"></a><p>下列是函数名的缩写，其中符合规范的是( )</p><input id="time_378" type="hidden" name="time[378]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、getCustomerInfo()</p>
+
+<p>B、getCustomerInformation</p>
+
+<p>C、getCustomerinfo()</p>
+
+<p>D、getcustomerinfo()</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[378]" rel="378" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[378]" rel="378" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[378]" rel="378" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[378]" rel="378" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(25,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(27,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_379" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">28</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('379',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_379"></a><p>下列编程符合规范的是( )</p><input id="time_379" type="hidden" name="time[379]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、rect.length = 10;</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;rect.width = 5;</p>
+
+<p>B、rect.length = 10;</p>
+
+<p>C、rect.width = 5;</p>
+
+<p>D、rectlength = 10,</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rect.width = 5;</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[379]" rel="379" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[379]" rel="379" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[379]" rel="379" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[379]" rel="379" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(26,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(28,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_380" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">29</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('380',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_380"></a><p>下列编程符合规范的是( )</p><input id="time_380" type="hidden" name="time[380]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、Object o = new Object(),Object b = null;</p>
+
+<p>B、Object o = new Object(). Object b = null;</p>
+
+<p>C、Object o = new Object(),</p>
+
+<p>&nbsp;&nbsp;Object b = null;</p>
+
+<p>D、Object o = new Object();</p>
+
+<p>&nbsp;&nbsp;Object b = null;</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[380]" rel="380" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[380]" rel="380" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[380]" rel="380" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[380]" rel="380" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(27,1);" title="上一题">上一题</a>
+				            						            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(29,1);" title="下一题">下一题</a>
+													            	</div>
+			            	</div>
+						</div>
+					</div>
+						                	                	                <div id="question_381" class="paperexamcontent">
+						<div class="media well">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<span class="badge badge-info questionindex">30</span></a>
+								</li>
+								<!--<li class="btn-group pull-right">
+									<button class="btn" type="button" onclick="javascript:signQuestion('381',this);"><em class="icon-star-empty" title="标注"></em></button>
+								</li>-->
+							</ul>
+							<div class="media-body well text-warning">
+								<a name="question_381"></a><p>下列编程符合规范的是( )</p><input id="time_381" type="hidden" name="time[381]"/>
+							</div>
+														<div class="media-body well">
+		                    	<p>A、// 如果 receiveFlag 为假</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;if (!receiveFlag)</p>
+
+<p>B、// 如果 receiveFlag 不等于0</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (receiveFlag!=0)</p>
+
+<p>C、// 如果从连结收到消息</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;if (receiveFlag)</p>
+
+<p>D、// 如果 receiveFlag等于0</p>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;if (receiveFlag==0)</p>		                    </div>
+							<div class="media-body well">
+		                    				                        			                        			                        <label class="radio inline"><input type="radio" name="question[381]" rel="381" value="A" />A </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[381]" rel="381" value="B" />B </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[381]" rel="381" value="C" />C </label>
+			                        			                        			                        <label class="radio inline"><input type="radio" name="question[381]" rel="381" value="D" />D </label>
+			                        			                        			                        		                        		                    </div>
+														<div class="media-body well">
+								<div class="btn-group pull-right">
+				            						            		<a class="btn" href="javascript:;" onclick="javascript:gotoindexquestion(28,1);" title="上一题">上一题</a>
+				            						            						            	</div>
+			            	</div>
+						</div>
+					</div>
+														</div>
+																																												<div aria-hidden="true" id="submodal" class="modal hide fade" role="dialog" aria-labelledby="#mySubModalLabel">
+					<div class="modal-header">
+						<button aria-hidden="true" class="close" type="button" data-dismiss="modal">×</button>
+						<h3 id="mySubModalLabel">
+							交卷
+						</h3>
+					</div>
+					<div class="modal-body" id="modal-body" style="max-height:100%;">
+						<p>共有试题 <span class="allquestionnumber">50</span> 题，已做 <span class="yesdonumber">0</span> 题。您确认要交卷吗？</p>
+					</div>
+					<div class="modal-footer">
+						 <button type="button" onclick="javascript:submitPaper();" class="btn btn-primary">确定交卷</button>
+						 <input type="hidden" name="insertscore" value="1"/>
+						 <button aria-hidden="true" class="btn" type="button" data-dismiss="modal">再检查一下</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="row-fluid">
+	<div class="toolcontent">
+		<div class="container-fluid footcontent">
+			<div class="span2">
+				<ul class="unstyled">
+					<li><h4><img src="app/core/styles/images/icons/Watches.png" style="width:1.3em;"/> <span id="timer_h">00</span>：<span id="timer_m">00</span>：<span id="timer_s">00</span></h4></li>
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="unstyled">
+					<li><h6><a href="#top"><em class="icon-circle-arrow-up"></em>回顶部</a> &nbsp; <a href="#modal" data-toggle="modal"><em class="icon-calendar"></em>试题列表</a></h6></li>
+				</ul>
+			</div>
+			<div class="span6">
+				<ul class="unstyled">
+					<li><h6>已做 <span class="yesdonumber">0</span> 题 共 <span class="allquestionnumber">50</span> 题 总分：<span class="orange">150</span>分  考试时间：<span class="orange">60</span>分钟</h6></li>
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="unstyled">
+					<li class="text-right"><a href="#submodal" role="button" class="btn btn-primary" data-toggle="modal"> 交 卷 </a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+function gotoquestion(questid,questypeid)
+{
+	$(".questionpanel").hide();
+	$(".paperexamcontent").hide();
+	$("#panel-type-"+questypeid).show();
+	$("#question_"+questid).show();
+	$('#modal').modal('hide');
+}
+function gotoindexquestion(index)
+{
+	$(".questionpanel").hide();
+	$(".paperexamcontent").hide();
+	$(".paperexamcontent").eq(index).show();
+	$(".paperexamcontent").eq(index).parents(".questionpanel").show();
+}
+$(document).ready(function(){
+	$.get('index.php?exam-app-index-ajax-lefttime&rand'+Math.random(),function(data){
+		var setting = {
+									time:60,
+									hbox:$("#timer_h"),
+			mbox:$("#timer_m"),
+			sbox:$("#timer_s"),
+			finish:function(){submitPaper();}
+		}
+		setting.lefttime = parseInt(data);
+		countdown(setting);
+	});
+
+	var m = function(){
+		$(".questionpanel").hide();
+		$(".questionpanel:first").show();
+		$(".paperexamcontent").hide();
+		$(".paperexamcontent:first").show();
+	};
+	m();
+	//setInterval(refreshRecord,15000);
+	setInterval(saveanswer,300000);
+
+	$('.allquestionnumber').html($('.paperexamcontent').length);
+	$('.yesdonumber').html($('#modal-body .badge-info').length);
+
+	initData = $.parseJSON(storage.getItem('questions'));
+	if(initData){
+		for(var p in initData){
+			if(p!='set')
+			formData[p]=initData[p];
+			$("#time_"+$('[name="'+p+'"]').attr('rel')).val(initData[p].time);
+		}
+
+		var textarea = $('#form1 textarea');
+		$.each(textarea,function(){
+			var _this = $(this);
+			if(initData[_this.attr('name')])
+			{
+				_this.val(initData[_this.attr('name')].value);
+				CKEDITOR.instances[_this.attr('id')].setData(initData[_this.attr('name')].value);
+				if(initData[_this.attr('name')].value && initData[_this.attr('name')].value != '')
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}
+		});
+
+		var texts = $('#form1 :input[type=text]');
+		$.each(texts,function(){
+			var _this = $(this);
+			if(initData[_this.attr('name')])
+			{
+				_this.val(initData[_this.attr('name')]?initData[_this.attr('name')].value:'');
+				if(initData[_this.attr('name')].value && initData[_this.attr('name')].value != '')
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}
+		});
+
+		var radios = $('#form1 :input[type=radio]');
+		$.each(radios,function(){
+			var _= this, v = initData[_.name]?initData[_.name].value:null;
+			var _this = $(this);
+			if(v!=''&&v==_.value){
+				_.checked = true;
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}else{
+				_.checked=false;
+			}
+		});
+
+		var checkboxs=$('#form1 :input[type=checkbox]');
+		$.each(checkboxs,function(){
+			var _=this,v=initData[_.name]?initData[_.name].value:null;
+			var _this = $(this);
+			if(v!=''&&v==_.value){
+				_.checked=true;
+				batmark(_this.attr('rel'),initData[_this.attr('name')].value);
+			}else{
+				_.checked=false;
+			}
+		});
+	}
+
+	$('#form1 :input[type=text]').change(function(){
+		var _this=$(this);
+		var p=[];
+		p.push(_this.attr('name'));
+		p.push(_this.val());
+		p.push(Date.parse(new Date())/1000);
+		$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+		set.apply(formData,p);
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 :input[type=radio]').change(function(){
+		var _=this;
+		var _this=$(this);
+		var p=[];
+		p.push(_.name);
+		if(_.checked){
+			p.push(_.value);
+			p.push(Date.parse(new Date())/1000);
+			$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+			set.apply(formData,p);
+		}else{
+			p.push('');
+			p.push(null);
+			set.apply(formData,p);
+		}
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 textarea').change(function(){
+		var _= this;
+		var _this=$(this);
+		var p=[];
+		p.push(_.name);
+		p.push(_.value);
+		p.push(Date.parse(new Date())/1000);
+		$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+		set.apply(formData,p);
+		markQuestion(_this.attr('rel'));
+	});
+
+	$('#form1 :input[type=checkbox]').change(function(){
+		var _= this;
+		var _this = $(this);
+		var p=[];
+		p.push(_.name);
+		if(_.checked){
+			p.push(_.value);
+			p.push(Date.parse(new Date())/1000);
+			$('#time_'+_this.attr('rel')).val(Date.parse(new Date())/1000);
+			set.apply(formData,p);
+		}else{
+			p.push('');
+			p.push(null);
+			set.apply(formData,p);
+		}
+		markQuestion(_this.attr('rel'));
+	});
+});
+</script>
+<div class="row-fluid">
+	<div class="container-fluid logfooter">
+		<ul class="inline unstyled">
+			<li><a href="http://phpems.net">网站首页</a></li>
+			<li>|</li>
+			<li>Copyright © 2015中电长城网际系统应用有限公司</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+$(".thumbnails img").bind("error",function(){$(this).attr("src","app/core/styles/images/icons/Book.png?"+Math.random());});
+</script></body>
+</html>
