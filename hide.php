@@ -24,9 +24,9 @@
 			$dbp="1qaZ@wsx)p;/";
 			$dbn="pechina";*/
       $dbadd="w.rdc.sae.sina.com.cn";
-      $dbun="4k003x4xwx";
-      $dbp="2ymmhmjzx2m02jw3m5hzw3xjim03zz2420mljy1m";
-      $dbn="app_testcht";
+      $dbun="yxm4o00yzk";
+      $dbp="j0j130h24l022w3iy0zlk420x04xyjx0lz5043wy";
+      $dbn="app_indexblog";
       $SAE_MYSQL_PORT = "3307";
 /*            $dbadd="localhost";
       $dbun="root";
