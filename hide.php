@@ -31,7 +31,7 @@
 
 /*      $dbadd="localhost:3306";
       $dbun="root";
-      $dbp="root";
+      $dbp="root"; 
       $dbn="pechina";*/
 
 /*      
@@ -45,6 +45,9 @@
       $conn = mysql_connect($dbadd.':'.$dbport,$dbun,$dbp);
 			if (!$conn){
                die("连接数据库失败：" . mysql_error());
+            }
+      if ($conn){
+               echo "连接数据库成功";
             }
             mysql_select_db($dbn, $conn);
            	mysql_query("set character set 'utf8'");
