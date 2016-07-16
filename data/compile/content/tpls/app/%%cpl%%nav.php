@@ -40,7 +40,7 @@
     <div class="header">
 	    <div class="container2">
 				  <div class="logo">
-						<a href="http://www.cecgw.com.cn/"><img src="app/core/styles/css/img/new/logo.png" class="img-responsive" alt=""></a>
+						<a href="http://www.bupt.edu.cn/"><img src="app/core/styles/css/img/new/logo.png" class="img-responsive" alt=""></a>
 				  </div>
 				  <div class="head-nav">
 						<span class="menu"> </span>
