@@ -133,7 +133,7 @@ class app
 				$message = array(
 					'statusCode' => 300,
 					'errorinput' => 'args[username]',
-					"message" => "用户已经存在"
+					"message" => "用户1已经存在"
 				);
 				exit(json_encode($message));
 			}
