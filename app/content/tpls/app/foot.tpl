@@ -1,7 +1,7 @@
 <!-- footer-bottom -->
 	<div class="footer-bottom">
 		<div class="container">
-			<p>Copyright &copy; 2015.BUPT.<a target="_blank" href="http://www.bupt.edu.cn/">北京邮电大学</a></p>
+			<p>Copyright &copy; 2016.BUPT.<a target="_blank" href="http://www.bupt.edu.cn/">北京邮电大学</a></p>
 		</div>
 	</div>
 <!-- footer-bottom -->
