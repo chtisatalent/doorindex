@@ -1,4 +1,4 @@
-﻿<!-- footer-bottom -->
+<!-- footer-bottom -->
 	<div class="footer-bottom">
 		<div class="container">
 			<p>Copyright &copy; 2015.BUPT.<a target="_blank" href="http://www.bupt.edu.cn/">北京邮电大学</a></p>
@@ -11,7 +11,7 @@
 		<ul class="inline unstyled">
 			<li><a href="index.php">网站首页</a></li>
 			<li>|</li>
-			<li>Copyright © 2015中电长城网际系统应用有限公司</li>
+			<li>Copyright © 全国大学生移动互联网创新大赛组委会</li>
 		</ul>
 	</div>
 </div>
